@@ -1,0 +1,84 @@
+<htmn>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Texto do Head</title>
+    </head>
+
+    <body>
+        <!-- Módulo 01 - Curso Javascript Rocketseat || Por: Tiago Meurer -->
+
+        <script>
+
+            // Exercício 01
+            var endereco = {  
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"};
+
+            function userInfo(endereco){
+                return('O usuário mora em '+ endereco.cidade+' / '+endereco.uf+', no bairro '+endereco.bairro+', na rua "'+endereco.rua+'" com nº '+endereco.numero+'.');
+            }
+            console.log(userInfo(endereco));
+
+            // Exercício 02
+            var count = 1;
+            function pares(x, y) {  
+                
+                for (i = x; i <= y; i++){
+                    if(i % 2 == 0){
+                        console.log(i);
+                        count++;
+                    }
+                }
+            }
+            pares(32, 321);    
+            console.log('Foram exibidos: '+ count +' números pares.');         
+
+            //Exercício 03
+            function skillChecker(skills) {  
+                if(skills.indexOf('Javascript') >= 0){
+                    return true;
+                }
+            }
+
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            (skillChecker(skills)) ? console.log('Verdadeiro.') : console.log('Falso.'); // true ou false
+            
+            //Exercício 04
+            function experiencia(anos) {  
+                if(anosEstudo <= 1){
+                    return 'Iniciante';
+                } else if(anosEstudo <= 3){
+                    return 'Intermediário';
+                } else if(anosEstudo <= 6){
+                    return 'Avançado';
+                } else if(anosEstudo >=7){
+                    return 'Jedi Master';
+                }
+            }
+            var anosEstudo = 7;
+            console.log(experiencia(anosEstudo));     
+
+            //Exercício 05 
+            var usuarios = [  
+                {    nome: "Diego",
+                     habilidades: ["Javascript", "ReactJS", "Redux"]  
+                },
+                {    nome: "Gabriel",
+                     habilidades: ["VueJS", "Ruby on Rails", "Elixir"]  
+                }
+            ];                
+
+            function candidato(vetor){
+                for(var item of vetor){
+                    console.log('O '+item.nome+' possui as habilidades: '+item.habilidades.join(', '));
+                }
+            } 
+            candidato(usuarios);
+
+        </script>
+    </body>
+</htmn>
